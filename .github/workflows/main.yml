@@ -1,0 +1,14 @@
+name: Update version in deps2.dev
+on:
+  workflow_dispatch:
+jobs:
+  call-api:
+      runs-on: ubuntu-latest
+      steps:
+            - name: Read version from version.txt
+              run: echo "VERSION=$(4.5)">>$GITHUB_ENV
+            - name: print
+              run: |
+                 echo "{{ $env.VERSION }}"
+      
+        
