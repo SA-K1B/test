@@ -11,6 +11,6 @@ jobs:
               run: echo "VERSION=$(cat New.txt)">>$GITHUB_ENV
             - name: print
               run: |
-                 echo "${{ env.VERSION }}"
+                 echo "$VERSION"
       
         
