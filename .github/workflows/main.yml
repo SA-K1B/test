@@ -5,6 +5,8 @@ jobs:
   call-api:
       runs-on: ubuntu-latest
       steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
             - name: Read version from version.txt
               run: echo "VERSION=$(cat New.txt)">>$GITHUB_ENV
             - name: print
